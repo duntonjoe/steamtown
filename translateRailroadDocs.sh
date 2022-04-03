@@ -44,7 +44,6 @@ else
 	chmod u+x textcleaner.sh
 fi
 
-
 # Test for zip file param, ask if not supplied:
 if [ $# -eq 0 ]
 then
@@ -86,3 +85,6 @@ do
 	rm "$targetFiles/$file.txt"
 
 done
+
+# Delete textcleaner.sh as final clean-up step
+rm textcleaner.sh
