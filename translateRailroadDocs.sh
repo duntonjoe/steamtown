@@ -49,13 +49,14 @@ if [ $# -eq 0 ]
 then
 	# Setup File Locations
 	read -p 'Enter Assignmet ZIP File Location: ' assignment
-	targetFiles=$(unzip $assignment)
+	target=$assignment
 else
-	targetFiles=$( echo $1 | cut -d '.' -f 1)
+	target=$1
 fi
 
 # Unzip archive and setup output master:
-unzip $1 -d $targetFiles
+targetFiles=$( echo $target | cut -d '.' -f 1)
+unzip $target -d $targetFiles
 outputMaster="$targetFiles/OUTPUT_MASTER.txt"
 
 for f in $targetFiles/*.jpg;
