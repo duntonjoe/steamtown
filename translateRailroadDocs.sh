@@ -7,7 +7,7 @@ Red='\033[0;91m'
 Purp='\033[0;95m'
 NC='\033[0m'
 
-# Function to print spinner
+# Function to print progress bar
 progBar() {
 	printf "${Purp}"
 	i=25
