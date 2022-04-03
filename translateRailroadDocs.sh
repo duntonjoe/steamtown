@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Define Output Colors
 Blue='\033[0;94m'
